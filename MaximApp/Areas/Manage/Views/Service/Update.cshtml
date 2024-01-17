@@ -1,0 +1,33 @@
+﻿@model UpdateServiceVM
+<div class="col-sm-12 col-xl-6">
+    <form method="post">
+
+        <div class="bg-secondary rounded h-100 p-4">
+            <h6 class="mb-4">Floating Label</h6>
+            <div class="form-floating mb-3">
+                <input asp-for="Title" type="text" class="form-control"
+                       placeholder="Enter Title">
+                <label asp-for="Title">Title</label>
+                <span asp-validation-for="Title" style="color:red"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Icon" type="text" class="form-control" id="floatingPassword"
+                       placeholder="Enter icon with tag">
+                <label asp-for="Icon">Icon</label>
+                <span asp-validation-for="Icon" style="color:red"></span>
+
+            </div>
+            <div class="form-floating">
+                <textarea asp-for="Description" class="form-control" placeholder="Leave a Description here"
+                          style="height: 150px;"></textarea>
+                <label asp-for="Description">Description</label>
+                <span asp-validation-for="Description" style="color:red"></span>
+
+            </div>
+            <button class="w3-btn" type="submit">Update!</button>
+
+        </div>
+
+    </form>
+
+</div>
